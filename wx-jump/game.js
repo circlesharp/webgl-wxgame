@@ -1,6 +1,5 @@
 /* 小游戏入口 */
-import * as THREE from './libs/three';
-import adapter from './libs/weapp-adapter';
+import './libs/weapp-adapter';
+import Main from './src/main';
 
-import * as demo from './demo';
-
+Main.init();
