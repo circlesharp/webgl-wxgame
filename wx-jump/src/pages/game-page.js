@@ -36,10 +36,11 @@ export default class GamePage {
     });
 
     const mesh = new THREE.Mesh(geometry, material); // 类比：contex shader, fragment shader
+    this.mesh = mesh;
     mesh.position.x = 0;
     mesh.position.y = 0;
     mesh.position.z = 1;
-    // scene.add(mesh);
+    scene.add(mesh);
 
     /* heaper: x -> Red, y -> Green, z -> Blue */
     // scene.add(new THREE.AxesHelper(100));
@@ -64,6 +65,10 @@ export default class GamePage {
       currentAngle = currentAngle + duration / 1000 * Math.PI;
     }
 
+    setTimeout(() => {
+      this.callbacks.showGameOverPage();
+    }, 2000);
+
 
     /* render */
     function render() {
@@ -74,6 +79,14 @@ export default class GamePage {
     }
 
     render();
+  }
+
+  show() {
+    this.mesh.visible = true;
+  }
+
+  hide() {
+    this.mesh.visible = false;
   }
 
   restart() {

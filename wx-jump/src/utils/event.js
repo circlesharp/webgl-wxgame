@@ -11,7 +11,7 @@ class Event {
 
   notify(args) {
     this._listeners.forEach(listener => {
-      listener(sender, args);
+      listener(this._sender, args);
     });
   }
 }
