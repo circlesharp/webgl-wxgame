@@ -7,6 +7,7 @@ class Scene {
   }
 
   init() {
+    /* 三要素：renderer, camera, scene */
     const renderer = this.renderer = new THREE.WebGLRenderer({
       canvas,
       antialias: true,
