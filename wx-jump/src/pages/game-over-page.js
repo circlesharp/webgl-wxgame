@@ -10,7 +10,7 @@ export default class GameOverPage {
   }
 
   initGameoverCanvas({ scene }) {
-    this.scene = scene;
+    this.scene = scene; // 这个 scene 是 game-page 的
     const aspect = window.innerHeight / window.innerWidth;
 
     this.canvas = document.createElement('canvas');

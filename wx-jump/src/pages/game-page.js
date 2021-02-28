@@ -5,8 +5,8 @@ export default class GamePage {
 
   init() {
     console.log('game page init');
-    const width = 375;
-    const height = 667;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
 
     /* 核心3要素 */
     const renderer = new THREE.WebGLRenderer({ canvas });

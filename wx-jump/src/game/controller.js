@@ -5,9 +5,11 @@ class GameController {
   constructor() {
     this.gameView = gameView;
     this.gameModel = gameModel;
-    this.gameModel.stageChange.attach((sender, args) => {
-      const stageName = args.stage;
-      switch (stageName) {
+
+    /* 这段代码体现了 controller 调度了 modal & view */
+    /* 当 modal 的 stage 有变，执行 attach 的函数，这个函数能改变 view */
+    this.gameModel.stageChange.attach((sender, { stage }) => {
+      switch (stage) {
         case 'game-over':
           this.gameView.showGameOverPage();
           break;
