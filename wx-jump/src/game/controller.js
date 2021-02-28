@@ -29,12 +29,12 @@ class GameController {
       },
     };
 
-    const gameOverPageCallbacks = () => {
-      this.gameModel.setStage('game');
-    };
+    // const gameOverPageCallbacks = () => {
+    //   this.gameModel.setStage('game');
+    // };
 
     this.gameView.initGamePage(gamePageCallbacks);
-    this.gameView.initGameOverPage(gameOverPageCallbacks);
+    // this.gameView.initGameOverPage(gameOverPageCallbacks);
   }
 }
 
